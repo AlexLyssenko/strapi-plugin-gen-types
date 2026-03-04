@@ -1,3 +1,11 @@
+interface Visible {
+  "==": [{ var: string }, boolean];
+}
+
+interface Conditions {
+  visible: Visible;
+}
+
 export type StrapiAttribute = {
   type: string;
   required?: boolean;
@@ -10,6 +18,7 @@ export type StrapiAttribute = {
   multiple?: boolean;
   repeatable?: boolean;
   component?: string;
+  conditions?: Conditions;
 };
 
 export interface StrapiSchema {
