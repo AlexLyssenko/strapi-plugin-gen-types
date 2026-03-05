@@ -1,9 +1,13 @@
-interface Visible {
+interface VisibleMatch {
   "==": [{ var: string }, boolean];
 }
 
+interface VisibleIsNotMatch {
+  "!=": [{ var: string }, boolean];
+}
+
 interface Conditions {
-  visible: Visible;
+  visible: VisibleMatch | VisibleIsNotMatch;
 }
 
 export type StrapiAttribute = {
